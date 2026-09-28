@@ -505,4 +505,42 @@ body.vibrating .poem {
   text-shadow:
     0 0 12px rgba(0, 255, 255, 0.8),
     0 0 30px rgba(0, 255, 255, 0.45);
+} 
+
+#enter-pulse {
+  position: fixed;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  padding: 0.8rem 1.4rem;
+  border: 1px solid rgba(0, 255, 255, 0.55);
+  border-radius: 999px;
+
+  background: rgba(2, 5, 6, 0.88);
+  color: #d9eeee;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px rgba(0, 255, 255, 0.25),
+    0 0 28px rgba(0, 255, 255, 0.12);
+
+  transition:
+    opacity 0.6s ease,
+    box-shadow 0.3s ease;
+}
+
+#enter-pulse:hover {
+  box-shadow:
+    0 0 16px rgba(0, 255, 255, 0.55),
+    0 0 36px rgba(0, 255, 255, 0.22);
+}
+
+#enter-pulse.hidden {
+  opacity: 0;
+  pointer-events: none;
 }

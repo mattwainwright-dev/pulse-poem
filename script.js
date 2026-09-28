@@ -3,6 +3,19 @@ const pulseField = document.querySelector(".pulse-field");
 let vibrationStarted = false;
 const particleField = document.querySelector(".particles");
 const codeFragments = document.querySelector(".code-fragments");
+const poemAudio = document.getElementById("poem-audio");
+const enterPulse = document.getElementById("enter-pulse");
+enterPulse.addEventListener("click", async () => {
+  poemAudio.volume = 1;
+  poemAudio.currentTime = 0;
+
+  try {
+    await poemAudio.play();
+    enterPulse.classList.add("hidden");
+  } catch (error) {
+    console.error("Audio failed:", error);
+  }
+});
 
 let particlesCreated = false;
 
